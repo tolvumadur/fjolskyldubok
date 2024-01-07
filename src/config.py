@@ -29,6 +29,12 @@ def get_appkey():
         config = json.load(f)
         return config["AppKey"]
     
+def get_redirectURI():
+    assert _check_config_file_exists(), "No config file found at ~/.familysearch/config.json. See README for details."
+    with open(_get_config_file_path()) as f:
+        config = json.load(f)
+        return config["RedirectURI"]
+
 def get_password():
     assert _check_config_file_exists(), "No config file found at ~/.familysearch/config.json. See README for details."
     with open(_get_config_file_path()) as f:

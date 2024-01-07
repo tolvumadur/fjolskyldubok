@@ -2,7 +2,7 @@ import config
 from requests_oauthlib import OAuth2Session
 
 BASE_URL = "https://identint.familysearch.org" # Targeting Integration ENV for now
-REDIRECT_URI = ""
+REDIRECT_URI = config.get_redirectURI()
 CLIENT_ID = config.get_appkey() #config.get_client_id()
 RESPONSE_TYPE = "code"
 USERNAME = config.get_username()
